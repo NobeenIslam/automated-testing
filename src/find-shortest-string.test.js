@@ -1,12 +1,14 @@
 const findShortestString = require("./find-shortest-string");
 
 test("findShortestString finds the shortest string in an array", () => {
-  expect(findLongestString(["it", "isss", "app", "nice", "day"])).toBe("it");
-  expect(findLongestString(["whyyyy", "hello", "tooooo", "youuuuu"])).toBe("hello");
+  expect(findShortestString(["it", "isss", "app", "nice", "day"])).toBe("it");
+  expect(findShortestString(["whyyyy", "hello", "tooooo", "youuuuu"])).toBe(
+    "hello"
+  );
 });
 
-test("findLongestString returns the earlier string in cases of joint shortest strings", () => {
-  expect(findLongestString(["brave", "dance"])).toBe("brave");
-  expect(findLongestString(["holeeeee","vroles","troles"])).toBe("vroles")
-  expect(findLongestString(["ok","sok","wok","ek"])).toBe("ek")
+test("findShortestString returns the earlier string in cases of joint shortest strings", () => {
+  expect(findShortestString(["brave", "dance"])).toBe("brave");
+  expect(findShortestString(["holeeeee", "vroles", "troles"])).toBe("vroles");
+  expect(findShortestString(["ok", "sok", "wok", "ek"])).toBe("ek");
 });
